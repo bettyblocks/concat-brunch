@@ -22,6 +22,8 @@ config.plugins.concat =
   files:
     'public/app.js':
       sources: ['public/app.js', 'public/templates.js']
-      # Default to `false`
+      # Whether to remove the source files after concat. Default to `false`
       toRemove: true
+      # Whether to concat only in production mode. Default to `false`
+      productionOnly: true
 ```
