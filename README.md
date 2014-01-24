@@ -21,6 +21,7 @@ This example merges the content of `templates.js` into `app.js` and remove
 config.plugins.concat =
   files:
     'public/app.js':
-      source: ['public/app.js', 'public/templates.js']
-      remove: true
+      sources: ['public/app.js', 'public/templates.js']
+      # Default to `false`
+      toRemove: true
 ```
