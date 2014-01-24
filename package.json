@@ -1,0 +1,23 @@
+{
+  "name": "concat-brunch",
+  "version": "0.0.1",
+  "description": "Concatenate arbitrary files in Brunch",
+  "main": "./lib/index",
+  "author": "Kenneth Kan",
+  "license": "MIT",
+  "dependencies": {},
+  "scripts": {
+    "prepublish": "rm -rf lib && coffee --bare --output lib/ src/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kenhkan/concat-brunch"
+  },
+  "keywords": [
+    "brunch",
+    "concat",
+    "files",
+    "concatenation"
+  ],
+  "devDependencies": {}
+}
