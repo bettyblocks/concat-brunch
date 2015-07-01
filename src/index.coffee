@@ -12,7 +12,7 @@ module.exports = class ConcatBrunch
       # Read the sources and whether to remove old files
       { sources, toRemove, productionOnly } = options
       # Skip if we only want this to apply in production
-      continue unless productionOnly and @config.env.indexOf('production') > -1
+      continue if productionOnly and @config.env.indexOf('production') == -1
 
       # Create temporary destination file
       tempPath = "/tmp/concat_brunch_#{Math.floor Math.random() * 1024}"
