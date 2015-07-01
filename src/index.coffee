@@ -1,4 +1,5 @@
 fs = require 'fs'
+os = require 'os'
 
 module.exports = class ConcatBrunch
   brunchPlugin: yes
@@ -15,7 +16,7 @@ module.exports = class ConcatBrunch
       continue if productionOnly and @config.env.indexOf('production') == -1
 
       # Create temporary destination file
-      tempPath = "/tmp/concat_brunch_#{Math.floor Math.random() * 1024}"
+      tempPath = "#{os.tmpdir()}/concat_brunch_#{Math.floor Math.random() * 1024}"
       # Make sure the file is empty
       if fs.existsSync tempPath
         fs.unlinkSync tempPath
