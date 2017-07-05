@@ -5,7 +5,9 @@
   "main": "./lib/index",
   "author": "Kenneth Kan",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "fs-extra": "^3.0.1"
+  },
   "scripts": {
     "prepublish": "rm -rf lib && node_modules/.bin/coffee --bare --output lib/ src/"
   },

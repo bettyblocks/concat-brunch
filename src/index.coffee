@@ -1,4 +1,4 @@
-fs = require 'fs'
+fs = require 'fs-extra'
 os = require 'os'
 
 module.exports = class ConcatBrunch
@@ -30,6 +30,6 @@ module.exports = class ConcatBrunch
         fs.unlinkSync(source) if toRemove
 
       # Move the temp file to the destination
-      fs.renameSync tempPath, destPath
+      fs.moveSync tempPath, destPath, {overwrite: true}
 
     return
