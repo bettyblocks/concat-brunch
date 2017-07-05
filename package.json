@@ -1,6 +1,6 @@
 {
   "name": "concat-brunch",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Concatenate arbitrary files in Brunch",
   "main": "./lib/index",
   "author": "Kenneth Kan",
